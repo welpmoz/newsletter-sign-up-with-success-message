@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+:root {
+    --white: white;
+    --grey-25: rgba(25, 24, 43, 0.25);
+    --pale-navy: hsl(234, 17%, 26%);
+    --dark-navy: hsl(234, 29%, 20%);
+    --vermellion: hsl(4, 100%, 67%);
+    --gradient-1: linear-gradient(#FF6A3A, #FF527B);
+
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+
+    --bp-mobile: 24.375rem;
+    --bp-tablet: 31.25rem;
+    --bp-desktop: 62.5rem;
+}
+
+.txt-white {
+    color: var(--white);
+}
+
+.txt-grey-25 {
+    color: var(--grey-25);
+}
+
+.txt-pale-navy {
+    color: var(--pale-navy);
+}
+
+.txt-dark-navy {
+    color: var(--dark-navy);
+}
+
+.txt-vermellion {
+    color: var(--vermellion);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes fadeInOut {
+    from {
+        display: block;
+    }
+
+    to {
+        transform: translateX(-4rem);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOutIn {
+    from {
+        display: flex;
+    }
+
+    to {
+        transform: translateX(-4rem);
+        opacity: 0;
+    }
+}
+
+.screen-one {
+    opacity: 1;
+    min-height: 100vh;
+    background-color: var(--white);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.screen-two {
+    transition: opacity 0.5s, display 0.5s;
+    display: none;
+    opacity: 0;
+}
+
+.show-screen-two {
+    opacity: 1;
+    min-height: 100vh;
+    background-color: var(--white);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.hide-screen-one {
+    display: none;
+    animation: fadeInOut 500ms;
+}
+
+@media (min-width: 24.375rem) {
+    .screen-one {
+        padding: 3rem 2rem;
+        background-color: var(--pale-navy);
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (min-width: 31.25rem) {
+    .show-screen-two {
+        background-color: var(--pale-navy);
+        display: grid;
+        grid-template-columns: repeat(12, 6.4rem);
+        gap: 3.2rem;
+        align-content: center;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 62.5rem) {
+    .screen-one {
+        grid-template-columns: repeat(12, 6.4rem);
+        gap: 3.2rem;
+    }
+}

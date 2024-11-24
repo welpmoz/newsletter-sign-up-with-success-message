@@ -1,0 +1,16 @@
+.main-content > .text-wrapper > .text-content > .benefits {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.main-content > .text-wrapper > .text-content > .benefits li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.6rem;
+}
+
+.main-content > .text-wrapper > .text-content > .benefits li::before {
+    content: url('../assets/images/icon-list.svg');
+}

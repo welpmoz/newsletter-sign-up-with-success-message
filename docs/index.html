@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+  <link rel="stylesheet" href="./index.css">
+
+  <script defer src="https://cdn.jsdelivr.net/npm/validatorjs@3.22.1/dist/validator.min.js"></script>
+  <script defer src="./index.js"></script>
+</head>
+<body>
+
+  <main class="screen-one" id="screen-one">
+    <div class="main-content">
+      <div class="img-wrapper">
+        <img src="./assets/images/illustration-sign-up-mobile.svg" alt="Sign Up Illustration">
+        <img src="./assets/images/illustration-sign-up-desktop.svg" alt="Sign Up Illustration">
+      </div>
+  
+      <div class="text-wrapper">
+        <div class="text-content">
+          <h1 class="text-heading txt-dark-navy">Stay updated!</h1>
+        
+          <h2 class="text-body txt-dark-navy">Join 60,000+ product managers receiving monthly updates on:</h2>
+        
+          <ul class="benefits text-body txt-dark-navy">
+            <li>Product discovery and building what matters</li>
+            <li>Measuring to ensure updates are a success</li>
+            <li>And much more!</li>
+          </ul>
+        </div>
+      
+        <form class="form-content" id="form">
+          <div class="email-control">
+            <div class="email-control-header text-body-small" id="proof">
+              <label for="email" class="txt-dark-navy">Email address</label>
+              <span class="hide txt-vermellion">Valid email required</span>
+            </div>
+            <input
+              class="text-input txt-dark-navy"
+              type="text"
+              placeholder="email@company.com"
+              id="email"
+              name="email">
+          </div>
+        
+          <button type="submit" class="text-body-bold txt-white">
+            Subscribe to monthly newsletter
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <aside class="screen-two" id="screen-two">
+    <div class="thanks-content">
+      <div class="header">
+        <div class="img-wrapper">
+          <img src="./assets/images/icon-success.svg" alt="Success Icon">
+        </div>
+        
+        <h3 class="text-heading txt-dark-navy">Thanks for subscribing!</h3>
+      
+        <p class="text-body txt-dark-navy">
+          A confirmation email has been sent to <span class="text-body-bold" id="email-placeholder">ash@loremcompany.com</span>.
+          Please open it and click the button inside to confirm your subscription.
+        </p>
+      </div>
+    
+      <button type="button" class="text-body-bold txt-white" id="dismiss-button">Dismiss message</button>
+    </div>
+  </aside>
+</body>
+</html>
